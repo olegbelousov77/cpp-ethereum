@@ -29,8 +29,8 @@
 #endif
 
 #ifdef _MSC_VER
-#define _ALLOW_KEYWORD_MACROS
-#define noexcept throw()
+//#define _ALLOW_KEYWORD_MACROS
+//#define noexcept throw()
 #endif
 
 #include <map>

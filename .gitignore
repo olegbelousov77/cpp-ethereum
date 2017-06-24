@@ -70,3 +70,5 @@ project.pbxproj
 doc/html
 *.autosave
 node_modules/
+/test/x64
+/Win32/Debug

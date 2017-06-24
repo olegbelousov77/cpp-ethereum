@@ -1,0 +1,14 @@
+# cmake global
+#include_directories(${PROJECT_SOURCE_DIR}/extdep/install/windows/)
+
+cmake_minimum_required(VERSION 2.8.12)
+
+message("PROJECT_SOURCE_DIR=${PROJECT_SOURCE_DIR}")
+
+message("BEFORE=${CMAKE_FRAMEWORK_PATH}")
+set(CMAKE_FRAMEWORK_PATH "${PROJECT_SOURCE_DIR}/extdep/install/windows;${CMAKE_FRAMEWORK_PATH}")
+message("AFTER=${CMAKE_FRAMEWORK_PATH}")
+
+INCLUDE (cmake/FindCryptoPP.cmake)
+
+message("CRYPTOPP=${CRYPTOPP_ROOT_DIR}")

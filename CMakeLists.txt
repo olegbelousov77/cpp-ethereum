@@ -1,4 +1,6 @@
 # cmake global
+#set(CMAKE_FRAMEWORK_PATH "${ethereum_SOURCE_DIR}/extdep/install/windows;${CMAKE_FRAMEWORK_PATH}")
+
 cmake_minimum_required(VERSION 2.8.12)
 
 set(PROJECT_VERSION "0.9.41")
@@ -10,6 +12,9 @@ if (${CMAKE_VERSION} VERSION_GREATER 3.0)
 else()
 	project(ethereum)
 endif()
+
+set(CMAKE_INCLUDE_PATH "${ethereum_SOURCE_DIR}/extdep/install/windows/include;${CMAKE_INCLUDE_PATH}")
+set(CMAKE_LIBRARY_PATH "${ethereum_SOURCE_DIR}/extdep/install/windows/lib;${CMAKE_LIBRARY_PATH}")
 
 set(CMAKE_AUTOMOC ON)
 
